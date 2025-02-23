@@ -20,11 +20,10 @@ const allowedOrigins = ['https://viteamarelitefrontend.onrender.com','https://ae
 
 
 app.use(cors({
-  origin: allowedOrigins, // Allow specific origins
-  methods: ['GET', 'POST'], // Allow specific HTTP methods (adjust as needed)
-  credentials: true, // If you need to send cookies or authorization headers
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Ensure these are correct
+  credentials: true
 }));
-
 app.use(bodyParser.json());
 
 // const mongoURI = 'mongodb+srv://anirudhmore96:Fullstackanirudh96@apartmentcluster.sa5bh.mongodb.net/';
