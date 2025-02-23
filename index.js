@@ -16,7 +16,7 @@ const app = express();
 const dbName = 'apartmentdatabase';
 db = client.db(dbName);
 
-const allowedOrigins = ['https://viteamarelitefrontend.onrender.com','https://aeowa.in'];
+const allowedOrigins = ['https://viteamarelitefrontend.onrender.com','https://aeowa.in','http://localhost:3001'];
 
 
 app.use(cors({
