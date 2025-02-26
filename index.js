@@ -526,3 +526,19 @@ app.get('/temperature', async (req, res) => {
 
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
+const BACKEND_URL = "https://amarelitebackend.onrender.com"; // Replace with your real backend URL
+
+setInterval(async () => {
+    try {
+        await fetch(`${BACKEND_URL}/api/auth/login`);
+        console.log("Pinged server to keep it awake");
+    } catch (err) {
+        console.error("Ping failed", err);
+    }
+}, 60 * 1000); // Ping every 1 minute
+
+
+
+
